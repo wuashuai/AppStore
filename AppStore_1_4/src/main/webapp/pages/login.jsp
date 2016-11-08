@@ -75,19 +75,18 @@ body {
 			<div class="msg">${msg}</div>
 		</c:if>
 		
-		<form class="form-signin" action="<c:url value='j_spring_security_check' />" method='POST'>
+		<form name='loginForm' class="form-signin" action="<c:url value='j_spring_security_check' />" method='POST'>
        
 
-        	<label for="inputEmail" class="sr-only">User Name</label>
-        	<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        	<label for="username" class="sr-only">User Name</label>
+        	<input type='text' name='username' class="form-control" placeholder="User" required autofocus>
         
         	<label for="inputPassword" class="sr-only">Password</label>
-        	<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        	<input type="password"  name='password' id="inputPassword" class="form-control" placeholder="Password" required>
         	
 
-        	<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        	<button class="btn btn-lg btn-primary btn-block" name="submit" type="submit">Sign in</button>
       	</form>
-
 	</div>
 
 </body>
